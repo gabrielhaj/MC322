@@ -1,21 +1,23 @@
+package Biblioteca;
 
-public class Professor {
+public class Aluno {
 	// Atributos da classe
 	private String nome;
 	private int registro;
 	
-	//Construtor da classe
+	// Construtor da classe
 	
-	public Professor(String nome, int registro) {
+	public Aluno(String nome, int registro) {
 		this.nome = nome;
 		this.registro = registro;
 	}
 	
-	//Métodos da classe
+	//Metodos da classe
 	
 	public void pegarLivro() {
 		
 	}
+	
 	
 	//Getters and Setters
 	
