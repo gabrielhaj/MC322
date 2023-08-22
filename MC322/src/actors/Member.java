@@ -1,9 +1,14 @@
 package actors;
 
+import flows.Loan;
+import resources.Book;
+import java.util.Date;
+
 public class Member {
 	// Atributos da classe
 	private String name;
 	private int id;
+	private Loan[] loans;
 	
 	//Construtor da classe
 	public Member(String name, int id) {
@@ -25,6 +30,10 @@ public class Member {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public void borrowBook(Book book) {
+		Loan loan = new Loan(book, new Date());
 	}
 	
 }
