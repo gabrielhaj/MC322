@@ -5,23 +5,19 @@ import actors.Member;
 import resources.Book;
 
 public class Library {
-	private String name;
+	// Relações de agregação
 	private Employee[] employees;
 	private Member[] members;
 	private Book[] books;
 	
 
 	public Library(String name, Employee[] employees, Member[] members, Book[] books) {
-		this.name = name;
 		this.employees = employees;
 		this.members = members;
 		this.books = books;
 	}
 
 
-	public String getName() {
-		return name;
-	}
 
 
 	public Employee[] getEmployees() {
@@ -38,6 +34,10 @@ public class Library {
 		return books;
 	}
 	
+	//todo
+	public void addEmployee() {
+		return;
+	}
 	
 	
 	

@@ -1,14 +1,18 @@
 import actors.Member;
 import actors.Employee;
 import resources.Book;
+import resources.Author;
 import flows.Loan;
 import java.util.Date;
 
 public class Main {
 	public static void main(String[] args) {
+		Author author1 = new Author (
+				"Douglas Adams");
+		
 		Book book = new Book(
 		    "Guia do Mochilheiro das Galáxias",
-		    "Douglas Adams",
+		    author1,
 		    1,
 		    "Scifi"
 		);

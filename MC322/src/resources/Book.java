@@ -1,18 +1,17 @@
 package resources;
 
-import flows.Loan;
 
 
 public class Book {
 	// Atributos da classe
 	private String title;
-	private Author[] authors;
+	private Author author;
 	private int id;
 	private String genre;
 	
-	public Book(String title, Author[] authors, int id, String genre) {
+	public Book(String title, Author author, int id, String genre) {
 		this.title = title;
-		this.authors = authors;
+		this.author = author;
 		this.id = id;
 		this.genre = genre;
 	}
@@ -21,8 +20,8 @@ public class Book {
 		return title;
 	}
 
-	public Author[] getAuthors() {
-		return authors;
+	public Author getAuthor() {
+		return author;
 	}
 
 	public int getId() {
