@@ -5,24 +5,19 @@ import java.util.Date;
 
 public class Loan {
 	private Book book;
-	private Date dueDate;
+	private Renovation[] renovations;
+	private Date startedAt;
 	private Date returnedAt;
+	private int deadlineInDays;
 	
-	public Loan(Book book, Date dueDate) {
+	
+	public Loan(Book book, int deadlineInDays) {
 		this.book = book;
-		this.dueDate = dueDate;
-		returnedAt = null;
+		this.deadlineInDays = deadlineInDays;
+		this.startedAt = new Date();
+		this.returnedAt = null;
 	}
 
-	// getter/setter
-	public Book getBook() {
-		return book;
-	}
-
-	public Date getDueDate() {
-		return dueDate;
-	}
-	
 	// methods
 	public boolean isReturned() {
 		return returnedAt == null ? false : true;
@@ -33,6 +28,6 @@ public class Loan {
 	}
 	
 	public void renovate(Date newDate) {
-		dueDate = newDate;
+		//todo
 	}
 }

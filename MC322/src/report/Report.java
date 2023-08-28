@@ -1,12 +1,12 @@
 package report;
 import library.Library;
 
-public class report {
+public class Report {
 	//Relação de associação
 	private Library library;
 
 
-	public report(Library library) {
+	public Report(Library library) {
 		this.library = library;
 	}
 	
