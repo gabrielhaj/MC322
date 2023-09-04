@@ -1,17 +1,17 @@
 package flows;
 
-import resources.Book;
+import resources.Multimedia;
 import java.util.Date;
 
 public class Loan {
-	private Book book;
+	private Multimedia book;
 	private Renovation[] renovations;
 	private Date startedAt;
 	private Date returnedAt;
 	private int deadlineInDays;
 	
 	
-	public Loan(Book book, int deadlineInDays) {
+	public Loan(Multimedia book, int deadlineInDays) {
 		this.book = book;
 		this.deadlineInDays = deadlineInDays;
 		this.startedAt = new Date();

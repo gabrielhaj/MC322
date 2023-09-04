@@ -10,7 +10,7 @@ public class Main {
 		Author author1 = new Author (
 				"Douglas Adams");
 		
-		Book book = new Book(
+		Multimedia book = new Multimedia(
 		    "Guia do Mochilheiro das Galáxias",
 		    author1,
 		    "Scifi"

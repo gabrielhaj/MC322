@@ -2,13 +2,13 @@ package library;
 
 import actors.LibraryEmployee;
 import actors.Member;
-import resources.Book;
+import resources.Multimedia;
 
 public class Library {
 	// Relações de agregação
 	private LibraryEmployee[] employees;
 	private Member[] members;
-	private Book[] books;
+	private Multimedia[] books;
 	
 
 	public Library(String name, LibraryEmployee[] employees, Member[] members, Book[] books) {
@@ -30,7 +30,7 @@ public class Library {
 	}
 
 
-	public Book[] getBooks() {
+	public Multimedia[] getBooks() {
 		return books;
 	}
 	

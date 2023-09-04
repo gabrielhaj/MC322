@@ -1,7 +1,7 @@
 package actors;
 
 import flows.Loan;
-import resources.Book;
+import resources.Multimedia;
 import java.util.Date;
 
 //Abstract class. Its childs are professor,students,universityemployees...
@@ -66,7 +66,9 @@ abstract public class Member {
 
 	public void loanBook(Book book) {
 		Loan newLoan = new Loan(book, 5); // 5 days
-		//todo append loan to loans
+	
+	public void loanBook(Multimedia book) {
+		Loan loan = new Loan(book, 5); // 5 days
         Loan newLoans[] = new Loan[this.loans.length + 1];
         int i;
         for(i = 0; i < this.loans.length; i++) {
