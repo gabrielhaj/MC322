@@ -54,6 +54,10 @@ public abstract class Multimedia {
 		return copiesAvailable;
 	}
 	
+	public boolean isAvailable() {
+		return copiesAvailable > 0;
+	}
+	
 	public void addCopy(int newCopies) {
 		if(newCopies >= 1) {
 			this.copies += 1;

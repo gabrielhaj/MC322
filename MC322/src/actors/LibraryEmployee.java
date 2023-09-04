@@ -1,5 +1,7 @@
 package actors;
 
+import flows.Loan;
+import resources.Multimedia;
 
 //Parent class from manager that is administrator parent
 public class LibraryEmployee {
@@ -17,11 +19,6 @@ public class LibraryEmployee {
 	public String getName() {
 		return name;
 	}
-	
-//
-//	public void setName(String name) {
-//		this.name = name;
-//	}
 
 	public int getId() {
 		return id;
@@ -30,20 +27,20 @@ public class LibraryEmployee {
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-
-//	public void setId(int id) {
-//		this.id = id;
-//	}
 	
-	public void registerLoan() {
-		
+	public void registerLoan(Multimedia multimedia, Member member) {
+		if(multimedia.isAvailable()) {
+			Loan loan = new Loan(multimedia, member);	
+		} else {
+			/** @TODO error */
+		}
 	}
 	
-	public void registerRenovation(){
-		
-	}	
+	public void registerRenovation(Loan loan){
+		loan.renovate();
+	}
 	
-	public void registerDevolution() {
-		
+	public void registerDevolution(Loan loan) {
+		loan.returnBook();
 	}
 }
