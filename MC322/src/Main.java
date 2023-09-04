@@ -1,6 +1,6 @@
 import actors.Member;
 import actors.Employee;
-import resources.Book;
+import resources.Multimedia;
 import resources.Author;
 import flows.Loan;
 import java.util.Date;
@@ -10,7 +10,7 @@ public class Main {
 		Author author1 = new Author (
 				"Douglas Adams");
 		
-		Book book = new Book(
+		Multimedia book = new Multimedia(
 		    "Guia do Mochilheiro das Galáxias",
 		    author1,
 		    "Scifi"
