@@ -1,6 +1,6 @@
 import actors.Member;
 import actors.Employee;
-import resources.Multimedia;
+import resources.Book;
 import resources.Author;
 import flows.Loan;
 import java.util.Date;
