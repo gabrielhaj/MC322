@@ -1,17 +1,17 @@
 package library;
 
-import actors.Employee;
+import actors.LibraryEmployee;
 import actors.Member;
 import resources.Book;
 
 public class Library {
 	// Relações de agregação
-	private Employee[] employees;
+	private LibraryEmployee[] employees;
 	private Member[] members;
 	private Book[] books;
 	
 
-	public Library(String name, Employee[] employees, Member[] members, Book[] books) {
+	public Library(String name, LibraryEmployee[] employees, Member[] members, Book[] books) {
 		this.employees = employees;
 		this.members = members;
 		this.books = books;
@@ -20,7 +20,7 @@ public class Library {
 
 
 
-	public Employee[] getEmployees() {
+	public LibraryEmployee[] getEmployees() {
 		return employees;
 	}
 
