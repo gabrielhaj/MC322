@@ -13,7 +13,6 @@ public class Main {
 		Book book = new Book(
 		    "Guia do Mochilheiro das Galáxias",
 		    author1,
-		    1,
 		    "Scifi"
 		);
 		Member member = new Member(
