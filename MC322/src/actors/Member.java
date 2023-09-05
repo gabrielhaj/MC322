@@ -86,7 +86,7 @@ abstract public class Member {
 		if(loan.getMember() != this) {
 			/** @TODO error */
 		} else {			
-			Loan newLoans[] = new Loan[this.loans.length + 1];
+			Loan[] newLoans = new Loan[this.loans.length + 1];
 			int i;
 			for(i = 0; i < this.loans.length; i++) {
 				newLoans[i] = this.loans[i];

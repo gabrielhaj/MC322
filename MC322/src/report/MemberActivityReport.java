@@ -31,11 +31,11 @@ public class MemberActivityReport {
 	//todo
 	public int fineReport() {
 		Loan[] loan = this.member.getLoans();
+		int totalFine = 0;
 		for (int i = 0; i < loan.length; i++) {
-			if(loan[i].isReturned()) {
-				returnedTotalAmount ++;
-			}
+			totalFine += loan[i].getFine();
 		}
+		return totalFine;
 	}
 	
 	
