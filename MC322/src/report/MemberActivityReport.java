@@ -30,6 +30,7 @@ public class MemberActivityReport {
 	
 	//todo
 	public int fineReport() {
+		int returnedTotalAmount;
 		Loan[] loan = this.member.getLoans();
 		int totalFine = 0;
 		for (int i = 0; i < loan.length; i++) {

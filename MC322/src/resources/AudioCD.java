@@ -1,6 +1,7 @@
 package resources;
 
 import library.Location;
+import resources.PublishingCompany;
 
 public class AudioCD extends PhysicalMedia {
 	private String[] tracks;
