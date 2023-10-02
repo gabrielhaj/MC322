@@ -1,5 +1,10 @@
-package actors;
+	package actors;
 
+import excecao.ExcecaoDevolucaoSemEmprestimo;
+import excecao.ExcecaoItemDanificado;
+import excecao.ExcecaoItemNaoDisponivel;
+import excecao.ExcecaoLimiteEmprestimosExcedido;
+import excecao.ExcecaoMultasPendentes;
 import flows.Loan;
 import resources.Multimedia;
 
@@ -28,19 +33,36 @@ public class LibraryEmployee {
 		return phoneNumber;
 	}
 	
-	public void registerLoan(Multimedia multimedia, Member member) {
+	public void registerLoan(Multimedia multimedia, Member member) 
+			throws ExcecaoLimiteEmprestimosExcedido, ExcecaoItemNaoDisponivel, ExcecaoMultasPendentes{
 		if(multimedia.isAvailable()) {
-			Loan loan = new Loan(multimedia, member);	
+			if(member.getLoans().length < member.getMAX_LOANS()) {
+				Loan[] loans = member.getLoans();
+				int totalFine = 0;
+				for(int i = 0; i < loans.length; i++) {
+					totalFine += loans[i].getFine();					
+				}
+				if(totalFine == 0) {
+					Loan loan = new Loan(multimedia, member);
+				} else {
+					throw new ExcecaoMultasPendentes("O usuário possui multas pendentes");
+				}
+			} else {
+				throw new ExcecaoLimiteEmprestimosExcedido("O limite de empréstimos do usuário já foi atingido.");
+			}
+				
 		} else {
-			/** @TODO error */
+			throw new ExcecaoItemNaoDisponivel("O item não está disponível.");
 		}
+	
 	}
 	
 	public void registerRenovation(Loan loan){
 		loan.renovate();
 	}
 	
-	public void registerDevolution(Loan loan) {
+	public void registerDevolution(Loan loan) 
+			throws ExcecaoDevolucaoSemEmprestimo,ExcecaoItemDanificado  {
 		loan.returnBook();
 	}
 }
